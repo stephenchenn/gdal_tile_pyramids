@@ -13,7 +13,7 @@
 	pip-install google-cloud-storage 
 	gcloud auth application-default login 
 	python3 fetch.py 
- s
+
 3. Run mkdir.sh to prepare the directories for the pyramids 
 	chmod +x mkdir.sh 
 	./mkdir.sh 
