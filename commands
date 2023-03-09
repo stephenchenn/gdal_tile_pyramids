@@ -1,0 +1,23 @@
+1. Install gdal 
+	sudo apt-get update
+	sudo apt-get install gdal-bin to install gdal 
+	gdalinfo --version to verify 
+	sudo apt-get install gdal-utils to install gdal retile 
+	gdal_retile.py --version to verify 
+
+2. Install google cloud storage for python and fetch data from bucket 
+	sudo apt install python3-pip 
+	pip install google.cloud 
+	gcloud init 
+	Select project: eq-c2rw-research 
+	pip-install google-cloud-storage 
+	gcloud auth application-default login 
+	python3 fetch.py 
+ s
+3. Run mkdir.sh to prepare the directories for the pyramids 
+	chmod +x mkdir.sh 
+	./mkdir.sh 
+
+4. Run generatePyramid.sh to generate pyramids in corresponding directories 
+	chmod +x genereatePyramid.sh 
+	./generatePyramid.sh 
