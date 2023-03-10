@@ -24,5 +24,13 @@
 	chmod +x genereatePyramid.sh 
 	./generatePyramid.sh 
 
+6. Install JRE 11
+	sudo apt install openjdk-11-jre
+	java -version
+
+6. Install geoserver for linux and install ImagePyramid plugin
+	follow https://docs.geoserver.org/latest/en/user/installation/linux.html for geoserver installation
+	follow https://docs.geoserver.org/2.22.x/en/user/data/raster/imagepyramid.html#imagepyramid-install for ImagePyramid installation
+
 6. Create data stores, layers and layer group in geoserver using rest api
 	python3 geoserver_rest_api.py
