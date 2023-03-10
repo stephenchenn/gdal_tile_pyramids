@@ -15,7 +15,7 @@
 
 3. Install JRE 11 (must be JRE 7 or 11)
 	sudo apt install openjdk-11-jre
-	java -version
+	java --version
 
 4. Install geoserver for linux and install ImagePyramid plugin
 	follow https://docs.geoserver.org/latest/en/user/installation/linux.html for geoserver installation
