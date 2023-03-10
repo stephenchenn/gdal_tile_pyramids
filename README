@@ -5,7 +5,7 @@
 	sudo apt-get install gdal-utils to install gdal retile 
 	gdal_retile.py --version to verify 
 
-2. Install google cloud storage for python 
+2. Install Python Client for Google Cloud Storage API
 	sudo apt install python3-pip 
 	pip install google.cloud 
 	gcloud init 
@@ -13,24 +13,24 @@
 	pip-install google-cloud-storage 
 	gcloud auth application-default login 
 
-3. Fetch data from google cloud bucket
-	python3 fetch.py 
-
-4. Prepare the directories for the pyramids 
-	chmod +x mkdir.sh 
-	./mkdir.sh 
-
-5. Generate pyramids in corresponding directories 
-	chmod +x genereatePyramid.sh 
-	./generatePyramid.sh 
-
-6. Install JRE 11
+3. Install JRE 11 (must be JRE 7 or 11)
 	sudo apt install openjdk-11-jre
 	java -version
 
-6. Install geoserver for linux and install ImagePyramid plugin
+4. Install geoserver for linux and install ImagePyramid plugin
 	follow https://docs.geoserver.org/latest/en/user/installation/linux.html for geoserver installation
 	follow https://docs.geoserver.org/2.22.x/en/user/data/raster/imagepyramid.html#imagepyramid-install for ImagePyramid installation
 
-6. Create data stores, layers and layer group in geoserver using rest api
+5. Fetch data from google cloud bucket
+	python3 fetch.py 
+
+6. Prepare the directories for the pyramids 
+	chmod +x mkdir.sh 
+	./mkdir.sh 
+
+7. Generate pyramids in corresponding directories 
+	chmod +x genereatePyramid.sh 
+	./generatePyramid.sh 
+
+8. Create data stores, layers and layer group in geoserver using rest api
 	python3 geoserver_rest_api.py
