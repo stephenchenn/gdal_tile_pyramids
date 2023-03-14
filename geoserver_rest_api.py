@@ -17,7 +17,7 @@ for x in range(80):
 # create layer
 for x in range(80):
     url = 'http://localhost:8080/geoserver/rest/workspaces/tasmania/coveragestores/pyramid' + str(x) + '/coverages'
-    xml_data = '<coverage><nativeName>pyramid' + str(x) + '</nativeName><title>pyramid' + str(x) + '</title><name>pyramid' + str(x) + '</name><srs>EPSG:404000</srs></coverage>'
+    xml_data = '<coverage><nativeName>pyramid' + str(x) + '</nativeName><title>pyramid' + str(x) + '</title><name>pyramid' + str(x) + '</name><srs>EPSG:28355</srs></coverage>'
 
     headers = {'Content-type': 'text/xml'}
     response = requests.post(url, auth=(username, password), headers=headers, data=xml_data)
@@ -26,7 +26,7 @@ for x in range(80):
 # create layer group
 url = 'http://localhost:8080/geoserver/rest/layergroups'
 xml_data = '<layerGroup><name>pyramidGroup</name><title>pyramidGroup</title><workspace><name>tasmania</name></workspace><layers>'
-for x in range(77):
+for x in range(78):
     xml_data = xml_data + '<layer>pyramid' + str(x) + '</layer>'
 xml_data = xml_data + '</layers></layerGroup>'
 headers = {'Content-type': 'text/xml'}
